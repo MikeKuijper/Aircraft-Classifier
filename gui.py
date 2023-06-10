@@ -52,11 +52,10 @@ small_font = pygame.font.SysFont('Times New Roman', 20)
 big_font = pygame.font.SysFont('Standard', 60)
 
 screen = pygame.display.set_mode((1280, 720))
-pygame.display.set_caption("AE1205 AI Competition 2023 - Aircraft Classifier")
+pygame.display.set_caption("AE1205 AI Competition 2023 - Aircraft Classifier. Loading " + networkPath)
 clock = pygame.time.Clock()
 running = True
 
-screen.fill("#302e30")
 neuralNetworkInstance = magic.NeuralNetwork(networkPath)
 
 outputHeadingText = "Output"
@@ -71,6 +70,7 @@ edgeKernel = [1, 2, 1,
               -1, -2, -1]
 kernel_filter = ImageFilter.Kernel((3, 3), edgeKernel, scale=1, offset=0)
 
+pygame.display.set_caption("AE1205 AI Competition 2023 - Aircraft Classifier")
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
