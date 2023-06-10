@@ -3,6 +3,13 @@
 For the AE1205 Python programming competition, we made an airplane classifier. Using (deep) neural networks, that we
 programmed ourselves, the aim was to output the manufacturer, family, or variant of an aircraft, given its picture.
 
+All code and data files can also be found on [Github](https://github.com/MikeKuijper/Aircraft-Classifier).
+
+NOTE:
+Due to the size limitation on the project submission, I have included only the absolute essentials for running one of the
+two applications - excluding a third time-consuming one. Please get the full codebase from GitHub, as that is what the majority
+of the work went to.
+
 
 ## Approach in general
 
@@ -108,6 +115,8 @@ There are a few different ways provided to play around with the networks.
 2. Secondly, ``train.py`` allows you to train and assess your own neural networks on a classification problem.
 3. Lastly, ``data/formatImages.py`` allows you to entirely start from scratch with a custom dataset, or a different resolution for the current one.
 
+Be patient when you start ``gui.py``. It has to load the neural network before it can display anything.
+
 For the first two, you will have to choose a configuration above, or start from scratch (only for ``train.py``). Simply paste the code
 above in spot designated with ``# Configuration``. For the third, you will have to download the entire [FGVC Dataset by S. Maji et al.](https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/#aircraft);
 Due to the impracticality of sending over gigabytes worth of photos, they are not included.
@@ -122,6 +131,7 @@ testing environment. That is likely due to the following reasons:
 * The image dataset was slightly biased. Since every variant had 100 pictures, manufacturers with more variants were overrepresented in the dataset. This especially affects _Airbus/Boeing-M_, since it caused quite a nasty Boeing bias.
 * Difficult task. It would have performed better if all images were from roughly the same angle. This way, it is essentially encoding a rough 3D model, which is a difficult task.
 * Few images. Ideally, we would have had many more images. However, datasets like FGVC are not common. And manually compiling thousands of images would take much too long.
+* Old. The dataset does not contain newer aircraft, such as the Boeing 787.
 
 ## Requirements
 As stipulated by the competition requirements, the code does not require any exotic libraries. However, it does require
