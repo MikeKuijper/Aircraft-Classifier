@@ -1,0 +1,14 @@
+A300
+A310
+A320
+A330
+A340
+A380
+Boeing 707
+Boeing 717
+Boeing 727
+Boeing 737
+Boeing 747
+Boeing 757
+Boeing 767
+Boeing 777
