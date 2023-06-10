@@ -76,7 +76,6 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.DROPFILE:
-            print(event.file)
             image = Image.open(event.file)
             pilImageProcessed = image
 
@@ -123,6 +122,8 @@ while running:
             aircraftTypeText = families[sortedIndex[0]]
             otherAnswers = [families[i] for i in sortedIndex[1:displayedAnswers]]
             otherConfidences = [str(round(resultList[i] * 100, 1)) for i in sortedIndex[1:displayedAnswers]]
+            del result
+            del resultList
 
     screen.fill("#302e30")
     text_title = basic_font.render('Aircraft classifier', True, (255, 255, 255))
